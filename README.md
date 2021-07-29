@@ -1,0 +1,2 @@
+# MyFirstProjectOnDjango
+FirstSiteOnDjango
