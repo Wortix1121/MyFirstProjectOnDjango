@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ category.title }} : {{ block.super }}
+{% endblock  %}
+
+{% block menu %}
+    {% include 'inc/_nav.html' %}
+{% endblock  %}
+
+{% block title-site %}
+    <div class="title">
+        <h1>{{ category.title }}</h1>
+    </div>
+{% endblock  %}
+
+{% block sidebar %}
+    {% include 'inc/_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="news">
+        {% for itemN in news %}
+            <div class="news-block">
+                <h3>{{ itemN.title }}</h3>
+                <p>Категория: {{ itemN.category}}</p>
+                {% if itemN.photo %}
+                    <p><img src="{{ itemN.photo.url}}"></p>
+                {% else %}
+                    <p>Отсутствует изображение</p>
+                {% endif %}
+                <p>{{ itemN.created_at|timesince}}</p>
+                <div class="content-news">
+                    <h5>{{ itemN.content|safe|linebreaks|truncatewords:5 }}</h5>
+                </div>
+                <div class="more-news">
+                    <a href="{{ itemN.get_absolute_url }}">Read More...</a>
+                </div>
+                <div class="back">
+                    <a href="/">Назад</a>
+                </div>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}
+

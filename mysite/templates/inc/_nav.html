@@ -1,0 +1,39 @@
+
+
+<header>
+    <div class="logo">
+      <h1><a href="{% url 'home' %}">News</a></h1>
+      {% now "Y-m-d H:i:s" %}
+    </div>
+    
+    {% comment %} <button>
+        <span></span>
+    </button> {% endcomment %}
+    <div class="menu">
+      <a href="{% url 'home' %}">Главная</a>
+      <a href="{% url 'send' %}">Обратная связь</a>
+  
+      {% if request.user.is_authenticated %}
+        <a href="{% url 'add_news' %}">Добавить новость</a>
+      {% endif %}
+      {% if request.user.is_authenticated %}
+
+      <div class="username_nav">
+        Добро пожаловать,  <div class='text-color'>{{ user.username }}</div> | <a href="{% url 'logout' %}">Выход</a>
+      </div>
+      {% else %}
+      <div class="register_nav">
+              <a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Вход</a>
+      {% endif %}
+    </div>
+  
+
+ </header>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        let header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      })
+    </script>
+

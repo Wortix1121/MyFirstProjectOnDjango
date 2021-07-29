@@ -1,0 +1,354 @@
+* {
+    margin: 0 0 auto;
+}
+
+
+body {
+    background: url("../../media/photos/$Y/$m/$d/bg-add-news.jpg") no-repeat;
+    background-size: cover; 
+}
+header {
+    padding: 0.5% 10%;
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    flex-direction:row  ;
+    width: 80%;
+    position:fixed;
+    z-index: 1000;
+    transition: 0.6s;
+
+}
+
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+textarea {
+    resize: none; }
+.wrapper {
+   
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+ }
+
+    .inner {
+        background-color:#3c3c3f;
+        max-width: 758px;
+        margin: auto;
+        margin-top: 100px;
+        border: 10px solid #00ade6;
+        padding: 50px 100px 50px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); }
+      
+
+input, textarea,select {
+    font-family: "Montserrat-Regular";
+    color: #fff;
+    font-size: 15px; }
+
+
+.form-group .category {
+    margin-top: 25px;
+}
+select {
+    color:white;
+}
+option{
+    background-color:rgb(23, 105, 172);
+}
+.form-group {
+    
+    position: relative;
+    display: block;
+    margin-bottom: 48px; }
+    .form-group span {
+      font-size: 15px;
+      color: #00ade6;
+      position: absolute;
+      top: 11px;
+      transition: all .2s ease;
+      transform-origin: 0 0;
+      cursor: text; }
+    .form-group span.border {
+      height: 2px;
+      display: block;
+      position: absolute;
+      width: 101%;
+      left: 0;
+      top: 45px;
+      transform: scaleX(0);
+      transition: all .15s ease;
+      background: #fff; }
+  
+.form-control {
+    border: none;
+    border-bottom: 2px solid #00ade6;
+    display: block;
+    width: 100%;
+    height: 43px;
+    font-size: 15px;
+    background: none;
+    font-family: "Montserrat-SemiBold"; }
+
+.form-control label {
+ color: white;
+}
+    
+.form-control:focus, .form-control:valid {
+      border-bottom: 2px solid #fff; }
+
+.form-control:focus + span, .form-control:valid + span {
+        transform: translateY(-22px) scale(0.8); }
+
+.form-control:focus + span + .border, .form-control:valid + span + .border {
+        transform: scaleX(1); }
+  
+
+:focus {
+  outline: none; }   
+
+
+.title-add  h3 {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: "Montserrat-Bold";
+    text-align: center;
+    margin-bottom: 30px; 
+    color:white;
+    padding-bottom: 90px;}
+    
+/* button */
+
+.container-contact2-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px;
+  }
+  
+  .wrap-contact2-form-btn {
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+    width: auto;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .contact2-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: rgba(219,21,99,1);
+    background: -webkit-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    background: -o-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    background: -moz-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    top: 0;
+    left: -100%;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .contact2-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 244px;
+    height: 50px;
+  
+   
+  
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    
+  
+  }
+  
+  .wrap-contact2-form-btn:hover .contact2-form-bgbtn {
+    left: 0;
+  }
+  
+  
+
+
+    
+
+
+
+
+
+
+.chkbx input[type="checkbox"]{
+    display: none;
+}
+.chkbx {
+    position:relative;
+    cursor: pointer;
+    
+    
+}
+.chkbx h4 {
+    margin-left: 50px;
+    color:#2098D1;
+}
+.chkbx .x {
+    display: block;
+    width: 40px;
+    height:19px;
+    border:2px solid #00ade6;
+    border-radius:60px;
+    transition:.5s;
+    
+    
+}
+.chkbx .x::before{
+    content: "";
+    position: absolute;
+    width:17px;
+    height:17px;
+    top:3px;
+    left:3px;
+    box-sizing: border-box;
+    background: #d3d3be;
+    border: 2px solid #d3d3be;
+    border-radius:40px;
+    transition: .5s;
+}
+:checked ~ .x::before{
+    background-color:#fe7f2d;
+    border-color:#fe7f2d;
+    
+    transform:translateX(20px);
+}
+
+:checked  ~ .x {
+    border-color:#fe7f2d;
+    
+}
+
+
+
+
+.menu {
+    display: flex;
+    padding-top:1.3em;
+    color: white;
+  
+    justify-content: space-between;
+    flex-direction:row  ;
+    
+    
+    
+
+}
+.username_nav{
+    margin-top:-0.3%;
+    display: flex;
+}
+.menu a {
+    margin-right: 1.5em;
+    color: white;
+    margin-left:20px;
+}
+
+.menu a:hover{
+    color:darkslategray;
+}
+
+.logo a {
+    padding-top:0.8em;
+    color: white;
+}
+.logo .username_nav {
+    padding-top:0.8em;
+    color: white;
+    
+}
+
+
+.sticky {
+    padding: 1% 10%;
+    background-color: white;
+    color: black;
+}
+
+.sticky a {
+    color: black;
+}
+.sticky .username_nav {
+    color: black;
+}
+
+.text-color{
+    color: red;
+    margin-right: 20px;
+}
+
+
+.back{
+    background-color: red;
+}
+
+.form-add-news {
+    
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top:1%;
+}
+
+.form-block {
+    background-color:#333336;
+    border-radius: 10px;
+    margin-top:3%;
+    overflow: hidden;
+    padding: 72px 55px 90px 55px;
+    width: 790px;
+    height:25em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4%;
+    
+}
+
+.errorlist {
+    color: red;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Add news : {{ block.super }}
+{% endblock  %}
+
+{% block menu %}
+    {% include 'inc/_nav.html' %}
+{% endblock  %}
+
+{% block sidebar %}
+    {% include 'inc/_sidebar.html' %}
+{% endblock  %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="inner">
+            <form action="{% url 'add_news' %}" method="post">
+            <div class="title-add">
+                <h3>Добавление новости</h3>
+            </div>
+                {% csrf_token %} 
+                
+                 
+                {{ form.title.errors}}
+                <label class="form-group">
+                    {{ form.title }}
+                    <span>Название</span>
+                    <span class="border"></span>
+                </label>
+                
+                {{ form.content.errors}}            
+                <label class="form-group" >
+                    {{ form.content }} 
+                    <span >Введите текст</span>
+                    <span class="border"></span>
+                </label>
+                
+                {{ form.is_published.errors}}
+                <label class="chkbx">
+                    {{ form.is_published }}
+                    <span class="x"><h4>Опубликовать</h4></span>          
+                </label>
+                
+                {{ form.category.errors}}
+                <label class="form-group">
+                    <div class="category">
+                    {{ form.category }}
+                        <span>Категория</span>
+                        <span class="border"></span>
+                    </div>
+                </label>
+                <div class="container-contact2-form-btn">
+                    <div class="wrap-contact2-form-btn">
+                        <div class="contact2-form-bgbtn"></div>
+                            <button class="contact2-form-btn">
+                            Создать новость
+                            </button>
+                        </div>
+                    </div>
+                </div>   
+            </form>
+        </div>
+    </div>
+
+{% endblock  %}
+

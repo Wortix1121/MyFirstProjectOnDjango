@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Регистрация : {{ block.super }}
+{% endblock  %}
+
+{% block menu %}
+    {% include 'inc/_nav.html' %}
+{% endblock  %}
+
+{% block sidebar %}
+    {% include 'inc/_sidebar.html' %}
+{% endblock  %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="inner">
+            <form method="post">
+                {% csrf_token %}
+                <div class="title-add">
+                    <h3>Регистрация</h3>
+                </div>
+                <label class="form-group">
+                    <div class="category">
+                    {{ form.username }}
+                        <span>Имя пользователя</span>
+                        <span class="border"></span>
+                    </div>
+                <label class="form-group">
+                    <div class="category">
+                    {{ form.email }}
+                        <span>Email</span>
+                        <span class="border"></span>
+                    </div>
+                <label class="form-group">
+                    <div class="category">
+                    {{ form.password1 }}
+                        <span>Пароль</span>
+                        <span class="border"></span>
+                    </div>
+                <label class="form-group">
+                    <div class="category">
+                    {{ form.password2 }}
+                        <span>Подтверждение пароля</span>
+                        <span class="border"></span>
+                    </div>
+                <div class="container-contact2-form-btn">
+                    <div class="wrap-contact2-form-btn">
+                        <div class="contact2-form-bgbtn"></div>
+                            <button class="contact2-form-btn">
+                            Зарегистрироваться
+                            </button>
+                        </div>
+                    </div>
+                {{ form.captcha }}
+                </div>
+            </form>
+        </div>
+        </div>
+
+{% endblock  %}
+

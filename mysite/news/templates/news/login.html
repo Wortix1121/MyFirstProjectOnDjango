@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Регистрация : {{ block.super }}
+{% endblock  %}
+
+{% block menu %}
+    {% include 'inc/_nav.html' %}
+{% endblock  %}
+
+{% block sidebar %}
+    {% include 'inc/_sidebar.html' %}
+{% endblock  %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="inner">
+            <form method="post">
+                {% csrf_token %}
+                <label class="form-group">
+                    <div class="category">
+                    {{ form.username }}
+                        <span>Имя пользователя</span>
+                        <span class="border"></span>
+                    </div>
+                <label class="form-group">
+                    <div class="category">
+                    {{ form.password }}
+                        <span>Пароль</span>
+                        <span class="border"></span>
+                    </div>
+                    
+                <div class="container-contact2-form-btn">
+                    <div class="wrap-contact2-form-btn">
+                        <div class="contact2-form-bgbtn"></div>
+                            <button class="contact2-form-btn">
+                            Войти в аккаунт
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock  %}
+

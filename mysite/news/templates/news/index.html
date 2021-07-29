@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }} : {{ block.super }}
+{% endblock  %}
+
+{% block menu %}
+    {% include 'inc/_nav.html' %}
+{% endblock  %}
+
+{% block sidebar %}
+    {% include 'inc/_sidebar.html' %}
+{% endblock  %}
+
+{% block title-site %}
+    <div class="title">
+        <h1>{{ title }}</h1></div>
+{% endblock  %}
+
+{% block content %}
+    <div class="news">
+
+        {% for itemN in news %}
+            <div class="news-block">
+
+                <h3>{{ itemN.title }}</h3>
+                {% comment %} <div class="close"></div> {% endcomment %}
+                <p>Категория: <a href="{{ itemN.category.get_absolute_url }}"> {{ itemN.category }}</a></p>
+                
+                {% if itemN.photo %}
+                    <p><img src="{{ itemN.photo.url}}"></p>
+                {% else %}
+                    <p>Отсутствует изображение</p>
+                {% endif %}
+                
+                <p>{{ itemN.created_at|timesince}}</p>
+                
+                <div class="content-news">
+                    <h5>{{ itemN.content|safe|linebreaks|truncatewords:10 }}</h5>
+                </div>
+
+                <div class="more-news">
+                    <a href="{{ itemN.get_absolute_url }}">Read More...</a>
+                </div>
+
+
+                <br>
+            </div>
+
+        {% endfor %}
+    </div>
+
+{% endblock  %}
+
