@@ -151,8 +151,8 @@ INTERNAL_IPS = ['127.0.0.1',]
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'akimov.hiper2017@yandex.ru'
-EMAIL_HOST_PASSWORD = 'dfkiwuqjr83015'
+EMAIL_HOST_USER = 'Почта@yandex.ru'
+EMAIL_HOST_PASSWORD = '********'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
