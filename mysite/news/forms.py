@@ -1,7 +1,5 @@
 from django import forms
 from django.forms.fields import CharField
-# from django.db.models import fields
-# from django.forms import widgets
 from .models import News
 import re
 from django.core.exceptions import ValidationError
@@ -18,8 +16,6 @@ class UserLoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     
-
-# Registration
 class UserRegisterForm(UserCreationForm):
     username = forms.CharField(label='Имя пользователя', help_text='Максимум из 150 символов' ,widget=forms.TextInput(attrs={'class': 'form-control'}))
     password1 = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
